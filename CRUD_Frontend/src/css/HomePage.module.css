@@ -1,0 +1,6 @@
+.editDelete_div{
+  display: flex;
+  justify-content:space-evenly;
+  padding: 1rem;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,15 @@
+html, body {
+  height:auto;
+  margin: 0;
+  padding: 0;
+scrollbar-width: thin;
+scrollbar-color: transparent transparent;
+}
+
+&::-webkit-scrollbar {
+  width: 0px;
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
