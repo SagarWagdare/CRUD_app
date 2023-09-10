@@ -31,7 +31,7 @@ const EditProfilePopup = ({ setOpen, open, users }) => {
         age: formData.age || "",
       };
       axios
-        .patch(`http://localhost:8000/updateuser/${_id}`, payload)
+        .patch(`http://localhost:8000/api/crud/updateuser/${_id}`, payload)
         .then((res) => {
           console.log(res);
           alert.success("Success");

@@ -7,8 +7,10 @@ const CreatePage = () => {
     name: "",
     email: "",
     age: "",
-    files: null
+    files: {}
   });
+
+  console.log(formData.files, "Here")
 
   const handleAddUser = useCallback(
     async (e) => {
@@ -20,7 +22,7 @@ const CreatePage = () => {
         files: formData.files,
       };
       axios
-        .post("http://localhost:8000/addUser", payload)
+        .post("http://localhost:8000/api/crud/adduser", payload)
         .then((res) => {
           console.log(res);
 
@@ -144,11 +146,11 @@ const CreatePage = () => {
                       name="file-upload"
                       type="file"
                       className="sr-only"
-                      value={formData.files}
+                      // value={formData.files}
                       onChange={(e) => {
                         setFormData({
                           ...formData,
-                          files: e.target.files,
+                          files: e.target.files[0],
                         });
                       }}
                     />

@@ -9,7 +9,7 @@ const HomePage = () => {
   const [users, setUsers] = useState({});
   useEffect(() => {
     axios
-      .get("http://localhost:8000/getUser")
+      .get("http://localhost:8000/api/crud/getuser")
       .then((res) => {
         setUserData(res?.data);
       })
@@ -24,7 +24,7 @@ const HomePage = () => {
   }, []);
   const handleDelete = useCallback(async (data) => {
     axios
-      .delete(`http://localhost:8000/deleteuser/${data}`)
+      .delete(`http://localhost:8000/api/crud/deleteuser/${data}`)
       .then((res) => {
         console.log(res);
         alert("Done");
